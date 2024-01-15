@@ -3,12 +3,13 @@ region  = "us-east-1"
 }
 
 resource "aws_instance" "demo-server" {
-    ami = "ami-0005e0cfe09cc9050"
+    ami = "ami-0c7217cdde317cfec"
     instance_type = "t2.micro"
     key_name = "dpp"
     //security_groups = ["demo-sg"]
     vpc_security_group_ids = [aws_security_group.demo-sg.id]
     subnet_id = aws_subnet.dpp-public-subnet-01.id
+   
   
 }
 
